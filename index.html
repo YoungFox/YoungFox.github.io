@@ -113,15 +113,28 @@
 <h2 id="使用Hexo博客框架为你的博客添砖加瓦">使用Hexo博客框架为你的博客添砖加瓦</h2><h3 id="1-_安装Hexo">1. 安装Hexo</h3><p>前提：<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a>，<a href="http://git-scm.com/" target="_blank" rel="external">Git</a></p>
 <p>安装完以上必要程序，即可安装Hexo</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -<span class="keyword">g</span> hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
-<p>安装完Hexo，新建文件夹如：Hexo，进入此文件夹执行以下命令：</p>
+<h3 id="2-_初始化">2. 初始化</h3><p>安装完Hexo，新建文件夹如：Hexo，进入此文件夹执行以下命令：</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>cd &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>npm install</span><br></pre></td></tr></table></figure>
 <p>初始化完成后，目录如下：</p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line"><span class="string">|   ├── _drafts</span></span><br><span class="line"><span class="string">|   └── _posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<h3 id="3-_安装Hexo本地服务器">3. 安装Hexo本地服务器</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
+<p>启动本地服务器</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+<p>浏览器中访问：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 即可看到初始的博客界面，默认主题是：landscape。</p>
+<p>在服务器启动期间，Hexo 会监视文件变动并自动更新，您无须重启服务器。</p>
+<h3 id="4-_生成静态文件">4. 生成静态文件</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="5-_部署至GitHub_Pages">5. 部署至GitHub Pages</h3><p>首先修改Hexo根目录下的_config.yml配置，一般在尾部</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="string">'git@github.com:username/username.github.io.git'</span></span><br><span class="line">  <span class="attribute">branch</span>: <span class="string">'master'</span></span><br><span class="line">  # <span class="attribute">message</span>: [message]</span><br></pre></td></tr></table></figure>
+<p>此处repo就是之前在Github Pages创建的项目SSH地址。</p>
+<p>最后部署到GitHub Pages</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>npm install hexo-deployer-git --save</span><br><span class="line"><span class="variable">$ </span>hexo deploy</span><br></pre></td></tr></table></figure>
+<p>部署完成后，再次访问<code>http://username.github.io</code>，就可以看到线上的博客了，并且有一篇名为“Hello World”的默认的文章。</p>
+<p>至此，通过Github Pages与Hexo搭建博客站已完成，可以进行近一步优化你的博客，如：修改为中文、修改主题、添加评论等等。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/16/Github-Pages与Hexo搭建博客教程/" data-id="ciayrak9j0000hlf7jo1v1ciq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/16/Github-Pages与Hexo搭建博客教程/" data-id="cib05euld0000fcf72hgumvg3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
@@ -161,7 +174,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/16/My-First-Post/" data-id="ciayraka60004hlf79ghhqm3w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/16/My-First-Post/" data-id="cib05eum30004fcf7o1na5ari" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
@@ -210,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/15/hello-world/" data-id="ciayraka40003hlf71g44tkgf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/15/hello-world/" data-id="cib05eum10003fcf7t2taomdw" class="article-share-link">Share</a>
       
       
     </footer>
