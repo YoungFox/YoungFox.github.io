@@ -61,6 +61,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-安装配置Git，使用Github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/24/安装配置Git，使用Github/" class="article-date">
+  <time datetime="2015-06-24T10:55:52.000Z" itemprop="datePublished">2015-06-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/24/安装配置Git，使用Github/">安装配置Git，使用Github</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在开始之前，先在<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 注册账号，注意，username稍微起的有意义点，别像我当年取了个“yang6233562”，简直low爆了。</p>
+<h2 id="安装配置Git">安装配置Git</h2><h3 id="1-_下载安装最新版的Git">1. <a href="http://git-scm.com/downloads" target="_blank" rel="external">下载安装最新版的Git</a></h3><h3 id="2-_打开终端，告诉本地Git你的名字，以便于后续提交能贴上正确的标签。在~$后输入以下代码：">2. 打开终端，告诉本地Git你的名字，以便于后续提交能贴上正确的标签。在<code>~$</code>后输入以下代码：</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.name</span> <span class="string">"YOUR NAME"</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-_告诉Git你的邮箱，这个邮箱将和你每次提交相关联。">3. 告诉Git你的邮箱，这个邮箱将和你每次提交相关联。</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.email</span> <span class="string">"YOUR EMAIL ADDRESS"</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-_通过Git来与GitHub进行认证（此处只讲SSH方式）">4. 通过Git来与GitHub进行认证（此处只讲SSH方式）</h3><h2 id="生成SSH_keys">生成SSH keys</h2><h3 id="1-_检查SSH_keys">1. 检查SSH keys</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -<span class="keyword">al</span> ~/.ssh</span><br></pre></td></tr></table></figure>
+<h3 id="2-_生成新的SSH_key，可以一路回车">2. 生成新的SSH key，可以一路回车</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -<span class="tag">b</span> <span class="number">4096</span> -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-_将生成的SSH_key添加到ssh-agent中">3. 将生成的SSH key添加到ssh-agent中</h3><ul>
+<li>确认ssh-agent可用</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加</li>
+</ul>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">ssh</span>-<span class="keyword">add </span>~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<h3 id="4-_将SSH_key添加到你的github账号中">4. 将SSH key添加到你的github账号中</h3><p>将~/.ssh/id_rsa.pub内容拷贝至github中Settings-&gt;SSH keys-&gt;Add SSH key</p>
+<h3 id="5-_测试连接">5. 测试连接</h3><ul>
+<li>打开终端输入：</li>
+</ul>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">ssh</span> -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
+<p>出现提示信息，输入“yes”</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi YoungFox! You've successfully authenticated, <span class="keyword">but</span> GitHub <span class="keyword">does</span> <span class="keyword">not</span> provide shell access.</span><br></pre></td></tr></table></figure>
+<p>出现此信息则表示成功。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/06/24/安装配置Git，使用Github/" data-id="cibansmwo0003o3f7047fasx9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-Github-Pages与Hexo搭建博客教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/06/16/Github-Pages与Hexo搭建博客教程/" class="article-date">
@@ -134,7 +195,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/16/Github-Pages与Hexo搭建博客教程/" data-id="cib05euld0000fcf72hgumvg3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/16/Github-Pages与Hexo搭建博客教程/" data-id="cibansmw40000o3f7e514z84i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
@@ -174,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/16/My-First-Post/" data-id="cib05eum30004fcf7o1na5ari" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/16/My-First-Post/" data-id="cibansmww0006o3f77m4o4sqy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
@@ -223,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/15/hello-world/" data-id="cib05eum10003fcf7t2taomdw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/15/hello-world/" data-id="cibansmwv0005o3f7yr949y3z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -246,7 +307,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
+      <a href="/tags/教程/" style="font-size: 20px;">教程</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
     </div>
   </div>
 
@@ -255,7 +316,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -265,6 +326,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/06/24/安装配置Git，使用Github/">安装配置Git，使用Github</a>
+          </li>
         
           <li>
             <a href="/2015/06/16/Github-Pages与Hexo搭建博客教程/">Github Pages与Hexo搭建博客教程</a>
