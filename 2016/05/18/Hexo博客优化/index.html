@@ -5,25 +5,22 @@
   
   <title>Hexo博客优化 | YoungFox&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo博客优化将默认评论插件替换为“多说”新建comment.ejs
+  <meta name="description" content="将默认评论插件替换为“多说”新建comment.ejs
 12345&amp;lt;% if ( page.comments)&amp;#123; %&amp;gt;	&amp;lt;section id=&quot;comment&quot;&amp;gt;		&amp;lt;!-- 多说JS代码  --&amp;gt;	&amp;lt;/section&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
-其中page.comments默认值为true
-将article.">
+其中page.comments默认值为true">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo博客优化">
-<meta property="og:url" content="http://youngfox.github.io/2015/07/21/Hexo博客优化/index.html">
+<meta property="og:url" content="http://youngfox.github.io/2016/05/18/Hexo博客优化/index.html">
 <meta property="og:site_name" content="YoungFox's blog">
-<meta property="og:description" content="Hexo博客优化将默认评论插件替换为“多说”新建comment.ejs
+<meta property="og:description" content="将默认评论插件替换为“多说”新建comment.ejs
 12345&amp;lt;% if ( page.comments)&amp;#123; %&amp;gt;	&amp;lt;section id=&quot;comment&quot;&amp;gt;		&amp;lt;!-- 多说JS代码  --&amp;gt;	&amp;lt;/section&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
-其中page.comments默认值为true
-将article.">
-<meta property="og:updated_time" content="2016-05-18T07:18:53.000Z">
+其中page.comments默认值为true">
+<meta property="og:updated_time" content="2016-05-18T07:21:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客优化">
-<meta name="twitter:description" content="Hexo博客优化将默认评论插件替换为“多说”新建comment.ejs
+<meta name="twitter:description" content="将默认评论插件替换为“多说”新建comment.ejs
 12345&amp;lt;% if ( page.comments)&amp;#123; %&amp;gt;	&amp;lt;section id=&quot;comment&quot;&amp;gt;		&amp;lt;!-- 多说JS代码  --&amp;gt;	&amp;lt;/section&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
-其中page.comments默认值为true
-将article.">
+其中page.comments默认值为true">
   
   
     <link rel="icon" href="/favicon.png">
@@ -71,8 +68,8 @@
       <div class="outer">
         <section id="main"><article id="post-Hexo博客优化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/07/21/Hexo博客优化/" class="article-date">
-  <time datetime="2015-07-21T06:18:07.000Z" itemprop="datePublished">2015-07-21</time>
+    <a href="/2016/05/18/Hexo博客优化/" class="article-date">
+  <time datetime="2016-05-18T07:17:35.000Z" itemprop="datePublished">2016-05-18</time>
 </a>
     
   </div>
@@ -91,9 +88,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hexo博客优化">Hexo博客优化</h1><h2 id="将默认评论插件替换为“多说”">将默认评论插件替换为“多说”</h2><p>新建comment.ejs</p>
+        <h2 id="将默认评论插件替换为“多说”">将默认评论插件替换为“多说”</h2><p>新建comment.ejs</p>
 <figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> ( page.comments)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">	<span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comment"</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 多说JS代码  --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure>
 <p>其中page.comments默认值为true</p>
+<a id="more"></a>
 <p>将article.ejs中原来的评论代码删除</p>
 <figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">	<span class="tag">&lt;<span class="title">section</span> <span class="attribute">id</span>=<span class="value">"comments"</span>&gt;</span></span><br><span class="line"> 		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"disqus_thread"</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="title">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span></span><br><span class="line">  		<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"></span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure>
 <p>引入新的评论</p>
@@ -114,13 +112,13 @@
 <p>在_config.yml中配置i18n_dir:</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">i18n_dir:</span> <span class="built_in">zh</span>-cn</span><br></pre></td></tr></table></figure>
 <p>在模板中通过<code>__()</code>或<code>_p()</code>,即可得到翻译后的字符串。</p>
-<h2 id="添加“阅读全文”功能">添加“阅读全文”功能</h2><p>只需在文章中插入<a id="more"></a>即可，此注释之前的内容可以显示在首页，之后会插入”阅读全文”按钮，按钮文字在相应主题文件夹下的_config.yml文件中：</p>
+<h2 id="添加“阅读全文”功能">添加“阅读全文”功能</h2><p>只需在文章中插入<!--more-->即可，此注释之前的内容可以显示在首页，之后会插入”阅读全文”按钮，按钮文字在相应主题文件夹下的_config.yml文件中：</p>
 <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">excerpt_link</span>: <span class="string">阅读全文</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://youngfox.github.io/2015/07/21/Hexo博客优化/" data-id="ciocjf6gp000at5f7qgodl8ln" class="article-share-link">分享</a>
+      <a data-url="http://youngfox.github.io/2016/05/18/Hexo博客优化/" data-id="ciocjjgi10005tff7cz094gbt" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
@@ -130,15 +128,6 @@
   
     
 <nav id="article-nav">
-  
-    <a href="/2015/07/21/《克鲁塞德战记》攻略/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          《克鲁塞德战记》攻略
-        
-      </div>
-    </a>
   
   
     <a href="/2015/06/24/安装配置Git，使用Github/" id="article-nav-older" class="article-nav-link-wrap">
@@ -153,7 +142,7 @@
 
 <section id="comment">
 <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="/2015/07/21/Hexo博客优化/" data-title="Hexo博客优化" data-url="http://youngfox.github.io/2015/07/21/Hexo博客优化/"></div>
+	<div class="ds-thread" data-thread-key="/2016/05/18/Hexo博客优化/" data-title="Hexo博客优化" data-url="http://youngfox.github.io/2016/05/18/Hexo博客优化/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -180,7 +169,7 @@ var duoshuoQuery = {short_name:"yang1986"};
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/手游/" style="font-size: 10px;">手游</a> <a href="/tags/攻略/" style="font-size: 10px;">攻略</a>
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
     </div>
   </div>
 
@@ -189,7 +178,7 @@ var duoshuoQuery = {short_name:"yang1986"};
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -201,11 +190,7 @@ var duoshuoQuery = {short_name:"yang1986"};
       <ul>
         
           <li>
-            <a href="/2015/07/21/《克鲁塞德战记》攻略/">《克鲁塞德战记》攻略</a>
-          </li>
-        
-          <li>
-            <a href="/2015/07/21/Hexo博客优化/">Hexo博客优化</a>
+            <a href="/2016/05/18/Hexo博客优化/">Hexo博客优化</a>
           </li>
         
           <li>
