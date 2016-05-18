@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="YoungFox's blog">
 <meta property="og:description" content="在开始之前，先在https://github.com/ 注册账号，注意，username稍微起的有意义点，别像我当年取了个“yang6233562”，简直low爆了。
 安装配置Git1. 下载安装最新版的Git2. 打开终端，告诉本地Git你的名字，以便于后续提交能贴上正确的标签。在~$后输入以下代码：">
-<meta property="og:updated_time" content="2015-07-02T02:57:38.000Z">
+<meta property="og:updated_time" content="2015-10-15T05:58:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装配置Git，使用Github">
 <meta name="twitter:description" content="在开始之前，先在https://github.com/ 注册账号，注意，username稍微起的有意义点，别像我当年取了个“yang6233562”，简直low爆了。
@@ -90,6 +90,7 @@
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.name</span> <span class="string">"YOUR NAME"</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-_告诉Git你的邮箱，这个邮箱将和你每次提交相关联。">3. 告诉Git你的邮箱，这个邮箱将和你每次提交相关联。</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.email</span> <span class="string">"YOUR EMAIL ADDRESS"</span></span><br></pre></td></tr></table></figure>
 <h3 id="4-_通过Git来与GitHub进行认证（此处只讲SSH方式）">4. 通过Git来与GitHub进行认证（此处只讲SSH方式）</h3><h2 id="生成SSH_keys">生成SSH keys</h2><h3 id="1-_检查SSH_keys">1. 检查SSH keys</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -<span class="keyword">al</span> ~/.ssh</span><br></pre></td></tr></table></figure>
+<p>如果看到有id_rsa、id_rsa.pub则跳过第二步</p>
 <h3 id="2-_生成新的SSH_key，可以一路回车">2. 生成新的SSH key，可以一路回车</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -<span class="tag">b</span> <span class="number">4096</span> -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-_将生成的SSH_key添加到ssh-agent中">3. 将生成的SSH key添加到ssh-agent中</h3><ul>
 <li>确认ssh-agent可用</li>
@@ -99,7 +100,7 @@
 <li>添加</li>
 </ul>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">ssh</span>-<span class="keyword">add </span>~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<h3 id="4-_将SSH_key添加到你的github账号中">4. 将SSH key添加到你的github账号中</h3><p>将~/.ssh/id_rsa.pub内容拷贝至github中Settings-&gt;SSH keys-&gt;Add SSH key</p>
+<h3 id="4-_将SSH_key添加到你的github账号中">4. 将SSH key添加到你的github账号中</h3><p>将~/.ssh/id_rsa.pub内容拷贝至github中Settings-&gt;SSH keys-&gt;Add SSH key<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/id</span>_rsa.pub</span><br></pre></td></tr></table></figure></p>
 <h3 id="5-_测试连接">5. 测试连接</h3><ul>
 <li>打开终端输入：</li>
 </ul>
@@ -111,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://youngfox.github.io/2015/06/24/安装配置Git，使用Github/" data-id="cicd2tf4s0003y0f79jymmuns" class="article-share-link">分享</a>
+      <a data-url="http://youngfox.github.io/2015/06/24/安装配置Git，使用Github/" data-id="ciocjf6gg0003t5f7w1fuvc56" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
@@ -122,11 +123,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/07/21/《克鲁塞德战记》攻略/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/07/21/Hexo博客优化/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          《克鲁塞德战记》攻略
+          Hexo博客优化
         
       </div>
     </a>
@@ -180,7 +181,7 @@ var duoshuoQuery = {short_name:"yang1986"};
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -193,6 +194,10 @@ var duoshuoQuery = {short_name:"yang1986"};
         
           <li>
             <a href="/2015/07/21/《克鲁塞德战记》攻略/">《克鲁塞德战记》攻略</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/21/Hexo博客优化/">Hexo博客优化</a>
           </li>
         
           <li>
@@ -215,7 +220,7 @@ var duoshuoQuery = {short_name:"yang1986"};
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 YoungFox<br>
+      &copy; 2016 YoungFox<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

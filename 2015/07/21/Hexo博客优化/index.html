@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>YoungFox&#39;s blog</title>
+  <title>Hexo博客优化 | YoungFox&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YoungFox's blog">
-<meta property="og:url" content="http://youngfox.github.io/index.html">
+  <meta name="description" content="Hexo博客优化将默认评论插件替换为“多说”新建comment.ejs
+12345&amp;lt;% if ( page.comments)&amp;#123; %&amp;gt;	&amp;lt;section id=&quot;comment&quot;&amp;gt;		&amp;lt;!-- 多说JS代码  --&amp;gt;	&amp;lt;/section&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
+其中page.comments默认值为true
+将article.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客优化">
+<meta property="og:url" content="http://youngfox.github.io/2015/07/21/Hexo博客优化/index.html">
 <meta property="og:site_name" content="YoungFox's blog">
-<meta property="og:description">
+<meta property="og:description" content="Hexo博客优化将默认评论插件替换为“多说”新建comment.ejs
+12345&amp;lt;% if ( page.comments)&amp;#123; %&amp;gt;	&amp;lt;section id=&quot;comment&quot;&amp;gt;		&amp;lt;!-- 多说JS代码  --&amp;gt;	&amp;lt;/section&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
+其中page.comments默认值为true
+将article.">
+<meta property="og:updated_time" content="2016-05-18T07:18:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YoungFox's blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Hexo博客优化">
+<meta name="twitter:description" content="Hexo博客优化将默认评论插件替换为“多说”新建comment.ejs
+12345&amp;lt;% if ( page.comments)&amp;#123; %&amp;gt;	&amp;lt;section id=&quot;comment&quot;&amp;gt;		&amp;lt;!-- 多说JS代码  --&amp;gt;	&amp;lt;/section&amp;gt;&amp;lt;% &amp;#125; %&amp;gt;
+其中page.comments默认值为true
+将article.">
   
   
     <link rel="icon" href="/favicon.png">
@@ -27,8 +37,8 @@
   <div id="container">
     <div id="wrap">
       
-        <header id="header">
-  <div id="banner"></div>
+        <header id="header-common">
+  <!-- <div id="banner"></div> -->
   <div id="header-outer" class="outer">
    <!--  <div id="header-title" class="inner">
       <h1 id="logo-wrap">
@@ -59,53 +69,7 @@
 </header>
       
       <div class="outer">
-        <section id="main">
-
-  
-    <article id="post-《克鲁塞德战记》攻略" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/21/《克鲁塞德战记》攻略/" class="article-date">
-  <time datetime="2015-07-21T08:18:07.000Z" itemprop="datePublished">2015-07-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/21/《克鲁塞德战记》攻略/">《克鲁塞德战记》攻略</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>博客内容有点跑偏。。没办法，还是很喜欢玩游戏，把攻略写在这儿好了，省的老去别人网站翻。。广告太多，界面不简洁</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/07/21/《克鲁塞德战记》攻略/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://youngfox.github.io/2015/07/21/《克鲁塞德战记》攻略/" data-id="ciocjf6gn0005t5f7qb4b4q7s" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/手游/">手游</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/攻略/">攻略</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Hexo博客优化" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Hexo博客优化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/21/Hexo博客优化/" class="article-date">
   <time datetime="2015-07-21T06:18:07.000Z" itemprop="datePublished">2015-07-21</time>
@@ -118,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/21/Hexo博客优化/">Hexo博客优化</a>
+    <h1 class="article-title" itemprop="name">
+      Hexo博客优化
     </h1>
   
 
@@ -150,12 +114,9 @@
 <p>在_config.yml中配置i18n_dir:</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">i18n_dir:</span> <span class="built_in">zh</span>-cn</span><br></pre></td></tr></table></figure>
 <p>在模板中通过<code>__()</code>或<code>_p()</code>,即可得到翻译后的字符串。</p>
-<h2 id="添加“阅读全文”功能">添加“阅读全文”功能</h2><p>只需在文章中插入
-        
-          <p class="article-more-link">
-            <a href="/2015/07/21/Hexo博客优化/#more">阅读全文</a>
-          </p>
-        
+<h2 id="添加“阅读全文”功能">添加“阅读全文”功能</h2><p>只需在文章中插入<a id="more"></a>即可，此注释之前的内容可以显示在首页，之后会插入”阅读全文”按钮，按钮文字在相应主题文件夹下的_config.yml文件中：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">excerpt_link</span>: <span class="string">阅读全文</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
@@ -167,99 +128,48 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-安装配置Git，使用Github" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/24/安装配置Git，使用Github/" class="article-date">
-  <time datetime="2015-06-24T10:55:52.000Z" itemprop="datePublished">2015-06-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2015/07/21/《克鲁塞德战记》攻略/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          《克鲁塞德战记》攻略
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/24/安装配置Git，使用Github/">安装配置Git，使用Github</a>
-    </h1>
   
+    <a href="/2015/06/24/安装配置Git，使用Github/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">安装配置Git，使用Github</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在开始之前，先在<a href="https://github.com/">https://github.com/</a> 注册账号，注意，username稍微起的有意义点，别像我当年取了个“yang6233562”，简直low爆了。</p>
-<h2 id="安装配置Git">安装配置Git</h2><h3 id="1-_下载安装最新版的Git">1. <a href="http://git-scm.com/downloads">下载安装最新版的Git</a></h3><h3 id="2-_打开终端，告诉本地Git你的名字，以便于后续提交能贴上正确的标签。在~$后输入以下代码：">2. 打开终端，告诉本地Git你的名字，以便于后续提交能贴上正确的标签。在<code>~$</code>后输入以下代码：</h3>
-        
-          <p class="article-more-link">
-            <a href="/2015/06/24/安装配置Git，使用Github/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://youngfox.github.io/2015/06/24/安装配置Git，使用Github/" data-id="ciocjf6gg0003t5f7w1fuvc56" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
+<section id="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="/2015/07/21/Hexo博客优化/" data-title="Hexo博客优化" data-url="http://youngfox.github.io/2015/07/21/Hexo博客优化/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yang1986"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
 
-  
-    <article id="post-Github-Pages与Hexo搭建博客教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/16/Github-Pages与Hexo搭建博客教程/" class="article-date">
-  <time datetime="2015-06-16T03:06:53.000Z" itemprop="datePublished">2015-06-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/16/Github-Pages与Hexo搭建博客教程/">Github Pages与Hexo搭建博客教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="GitHub_Pages是什么？">GitHub Pages是什么？</h2><p>GitHub Pages是GitHub提供的免费空间，可以用来托管用户的静态网页。网页内容可以是用户/组织介绍或者项目介绍。官网给出的描述是：“Websites for you and your projects.”</p>
-<p>有两种方式创建、发布静态页，1：使用Automatic Page Generator工具；2：使用GitHub客户端或者命令行。本文使用第二种方法。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/06/16/Github-Pages与Hexo搭建博客教程/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://youngfox.github.io/2015/06/16/Github-Pages与Hexo搭建博客教程/" data-id="ciocjf6ft0000t5f7rnzq9k34" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
 </section>
         
           <aside id="sidebar">
